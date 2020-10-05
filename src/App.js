@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import './App.css';
-
+import Navbar from "./components/navabar.component";
+import Business from "./components/business.component"
+import Science from "./components/science.component"
+import Technology from "./components/technology.component"
+import Health from "./components/health.component"
+import Australia from "./components/australia.component"
+import NewZealand from "./components/newzealand.component"
+import International from "./components/international.component"
+import Sports from "./components/sports.component"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar/>
+        <br />
+        <Route path="/" exact component={International}/>
+        <Route path="/australia" component={Australia}/>
+        <Route path="/newzealand" component={NewZealand}/>
+        <Route path="/business" component={Business}/>
+        <Route path="/tech" component={Technology}/>
+        <Route path="/science" component={Science}/>
+        <Route path="/health" component={Health}/>  
+        <Route path="/sports" component={Sports}/> 
+    </Router>
+    
   );
 }
 
