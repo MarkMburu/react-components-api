@@ -15,6 +15,7 @@ export default function Navbar() {
           &times;
         </a>
         <Link to="/">International</Link>
+        <Link to="/corona">coronavirus</Link>
         <Link to="/newzealand">NewZealand</Link>
         <Link to="/australia"> Australia</Link>
         <Link to="/business">Business</Link>
@@ -22,6 +23,12 @@ export default function Navbar() {
         <Link to="/health"> Health</Link>
         <Link to="/tech">Technology</Link>
         <Link to="/sports">Sports</Link>
+        <Link to="/fashion">Fashion</Link>
+        <Link to="/retail">Retail</Link>
+        <Link to="/politics">Politics</Link>
+        <Link to="/automobile">Automobile</Link>
+        <Link to="/education">Education</Link>
+        <Link to="/startup">Startup</Link>
       </div>
       <div className="header">
         <span style={{ fontSize: "30px", cursor: "pointer" }} onClick={openNav}>
